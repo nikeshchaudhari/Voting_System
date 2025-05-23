@@ -13,21 +13,7 @@ include "config.php";
 </head>
 
 <body class="bg-light">
-    <section>
-        <div class="container-fluid ">
-            <div class="d-flex justify-content-center ">
-                <div class="user">
-                    <div class="d-flex  ">
-                        <div class="logo-img ps-2 pt-1">
-                            <img src="https://www.news24galaxy.com/wp-content/uploads/2022/01/1200px-Election_Commission_Nepal.svg_.png"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+  
     <section>
         <div class="container mt-5 d-flex flex-column justify-content-center form">
             <h3 class="mb-4 text-center">Signup</h3>
@@ -58,7 +44,7 @@ include "config.php";
                     <button type="submit" class="btn" name="sign-btn">Signup</button>
                 </div>
                 <div class="text-center pt-2">
-                    <span>Already have account? <span><a href="index.php">Login</a></span></span>
+                    <span>Already have account? <span><a href="login.php">Login</a></span></span>
                 </div>
 
             </form>
