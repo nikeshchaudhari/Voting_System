@@ -42,24 +42,38 @@ exit;
         </div>
         <div class="col-lg-10  px-0 ">
             <h4 class="d-flex justify-content-center py-3 main-candidate fw-bold ">Add Candidate</h4>
-            <div class="candidate-form mx-5">
+            <div class="candidate-form mx-5 ">
 <form class="main-form"method="post">
   <div class="mb-3 mx-3 ">
     <label for="exampleInputEmail1" class="form-label">Candidate Name</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text"  name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Candidate name">
    
   </div>
   <div class="mb-3 mx-3 ">
-    <label for="exampleInputPassword1" class="form-label">Party</label>
-    <input type="text" class="form-control" id="party">
+    <label for="exampleInputPassword1" class="form-label" >Party</label>
+    <input type="text" name="party" class="form-control" id="party" placeholder="Enter Party name" >
   </div>
   
-  <button type="submit" class="btn btn-primary mx-3 d-flex justify-content-sm-center aligb-item-sm-center" >Submit</button>
+  <button type="submit" name="add-btn"class="btn btn-primary mx-3 d-flex flex-column justify-content-sm-center align-item-sm-center" >Submit</button>
 </form>
             </div>
         </div>
     </div>
 </div>
+<?php
+if(isset($_POST['add-btn'])){
+    $name = $_POST['name'];
+    $party = $_POST['party'];
+    $query= "INSERT INTO candidate(name,party)VALUES('$name','$party')";
+    $data = mysqli_query($conn,$query);
+    if($data){
+       header("Location: dashboard.php");
+    }
+    else{
+        echo "not insert..";
+}
+}
+?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
