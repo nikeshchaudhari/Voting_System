@@ -5,8 +5,8 @@ include("../config.php");
 if(!isset($_SESSION['role'])|| $_SESSION['role']!= 'admin'){
 header("Location: ../login.php");
 exit;
-}
 
+}
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ exit;
                 <hr>
                 <a href="dashboard.php"><i class="fa-solid fa-gauge"></i>Dashboard</a>
                 <a href="add_candidate.php"><i class="fa-solid fa-user-plus"></i>Add Candidate</a>
-                <a href="manage_candidate.php"><i class="fa-solid fa-users-gear"></i>Manage Voter</a>
+               <a href="admin_votes.php"><i class="fa-solid fa-users-gear"></i>View Votes</a>
                 <a href="../logout.php"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
             </div>
 
