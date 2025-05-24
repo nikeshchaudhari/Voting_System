@@ -110,8 +110,8 @@ while($row = mysqli_fetch_array($data)){
                                     <td><?php echo $row['name'];?></td>
                                     <td><?php echo $row['party'];?></td>
                                     <td>
-                                        <a href="edit_candidate.php"><i class="fa-solid fa-pen-to-square me-3"></i></a>
-                                        <a href="delete_candidate.php"><i class="fa-solid fa-trash"></i></a>
+                                        <a href="edit_candidate.php?id=<?php echo $row['id'];?>"><i class="fa-solid fa-pen-to-square me-3"></i></a>
+                                        <a href="delete_candidate.php?id=<?php echo $row['id'];?>"><i class="fa-solid fa-trash"></i></a>
                                         
                                     </td>
 
@@ -122,7 +122,7 @@ while($row = mysqli_fetch_array($data)){
 }else{
     ?>
 <tr>
-    <td>No Records</td>
+    <td colspan="4" class="text-center">No Records</td>
 </tr>
     <?php
 }
